@@ -65,6 +65,14 @@ class LinkedList {
     }
     return currentNode;
   }
+  remove(index) {
+    const leader = this.traverseToIndex(index-1);
+    const unwantedNode = leader.next;
+    console.log(`This is unwanted node: ${JSON.stringify(unwantedNode)}`);
+    leader.next = unwantedNode.next;
+    this.length--;
+    return this.printList();
+  }
 }
 
 console.log(`===========The Linked list========== \n`)
@@ -80,3 +88,5 @@ myLinkedList.insert(2, 73);
 myLinkedList.insert(10, 75);
 console.log(`===========Call print list======= \n`);
 myLinkedList.printList();
+console.log(`===========Delete second node value======= \n`);
+myLinkedList.remove(2);
