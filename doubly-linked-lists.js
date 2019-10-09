@@ -5,7 +5,7 @@ class Node {
     this.prev = null
   }
 }
-class LinkedList {
+class DoublyLinkedList {
   constructor(value) {
     this.head = {
       value: value,
@@ -82,17 +82,17 @@ class LinkedList {
 }
 
 console.log(`===========The Linked list========== \n`)
-let myLinkedList = new LinkedList(10);
+let myDoublyLinkedList = new DoublyLinkedList(10);
 console.log(`===========Next append 5============ \n`);
-myLinkedList.append(5);
+myDoublyLinkedList.append(5);
 console.log(`===========Next append 16============ \n`);
-myLinkedList.append(16);
+myDoublyLinkedList.append(16);
 console.log(`===========Prepend 1============ \n`);
-myLinkedList.prepend(1);
+myDoublyLinkedList.prepend(1);
 console.log(`===========This is insert function======= \n`);
-myLinkedList.insert(2, 73);
-myLinkedList.insert(10, 75);
-// console.log(`===========Call print list======= \n`);
-// myLinkedList.printList();
+myDoublyLinkedList.insert(2, 73);
+myDoublyLinkedList.insert(10, 75);
+console.log(`===========Call print list======= \n`);
+myDoublyLinkedList.printList();
 console.log(`===========Delete second node value======= \n`);
-myLinkedList.remove(2);
+myDoublyLinkedList.remove(2);
