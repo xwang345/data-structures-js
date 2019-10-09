@@ -20,16 +20,15 @@ class LinkedList {
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
-    console.log(`This is head ${JSON.stringify(this)}`);
+    console.log(this);
     return this;
   }
   prepend(value) {
     const newNode = new Node(value);
     newNode.next = this.head;
-    console.log(`This is head ${JSON.stringify(this.head)}`);
     this.head = newNode;
-    console.log(`This is new head ${JSON.stringify(this.head)}`);
     this.length++;
+    console.log(this);
     return this;
   }
   printList() {
@@ -49,6 +48,7 @@ class LinkedList {
       return this.append(value);
     }
     const leader = this.traverseToIndex(index-1);
+    console.log(leader);
     const holdingPointer = leader.next;
     leader.next = newNode;
     newNode.next = holdingPointer;
